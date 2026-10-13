@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego Pong 2D con programación orientada a objetos.">
+    <title>Pong 2D | Graficación</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">GRAFICACIÓN · ACTIVIDAD 2.3</p>
+            <h1>Pong 2D</h1>
+            <p>Programación orientada a objetos y animación 2D</p>
+        </header>
+
+        <section class="panel-juego">
+            <div class="marcadores">
+                <div class="marcador marcador-jugador">
+                    <span class="nombre-marcador">JUGADOR</span>
+                    <span id="puntosJugador" class="puntos">0</span>
+                </div>
+
+                <div class="marcador marcador-ia">
+                    <span class="nombre-marcador">INTELIGENCIA ARTIFICIAL</span>
+                    <span id="puntosIA" class="puntos">0</span>
+                </div>
+            </div>
+
+            <div class="instrucciones">
+                <span>Movimiento: <kbd>↑</kbd> <kbd>↓</kbd></span>
+                <span id="estadoModo">Modo manual</span>
+            </div>
+
+            <canvas
+                id="gameCanvas"
+                width="800"
+                height="600"
+                aria-label="Juego Pong con cinco pelotas">
+                Tu navegador no admite Canvas.
+            </canvas>
+
+            <div class="opciones">
+                <label for="modoJuego">Modo de juego:</label>
+                <select id="modoJuego">
+                    <option value="manual">Manual: jugador contra IA</option>
+                    <option value="automatico">Automático: IA contra IA</option>
+                </select>
+
+                <p id="descripcionModo">
+                    Utiliza las flechas arriba y abajo para mover tu paleta.
+                </p>
+            </div>
+
+            <div class="controles">
+                <button id="reiniciar" type="button">Reiniciar juego</button>
+                <p>Las pelotas que salen del campo otorgan un punto al rival.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Proyecto académico · Ingeniería en Sistemas Computacionales</p>
+        </footer>
+    </main>
+</body>
+</html>

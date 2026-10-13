@@ -1,0 +1,224 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101827;
+    color: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    width: min(100%, 1000px);
+    text-align: center;
+}
+
+.encabezado {
+    margin-bottom: 20px;
+}
+
+.etiqueta {
+    color: #58d9c5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.encabezado > p:last-child {
+    color: #bac6d8;
+}
+
+.panel-juego {
+    padding: 16px;
+    background: #1b273a;
+    border: 1px solid #34445d;
+    border-radius: 16px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.3);
+}
+
+.marcadores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.marcador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 90px;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.marcador-jugador {
+    background: #10372f;
+    border-color: #00e5a8;
+}
+
+.marcador-ia {
+    background: #422b20;
+    border-color: #ff8c42;
+}
+
+.nombre-marcador {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.marcador-jugador .nombre-marcador {
+    color: #00e5a8;
+}
+
+.marcador-ia .nombre-marcador {
+    color: #ffad78;
+}
+
+.puntos {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.instrucciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #dce6f4;
+    font-size: 14px;
+}
+
+kbd {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #53637a;
+    border-radius: 5px;
+    background: #29384e;
+    color: white;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #080e19;
+    border: 2px solid #60728b;
+    border-radius: 6px;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 0 8px;
+}
+
+.opciones label {
+    font-weight: bold;
+}
+
+select {
+    width: min(100%, 360px);
+    padding: 11px 14px;
+    border: 1px solid #53637a;
+    border-radius: 8px;
+    background: #29384e;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#descripcionModo {
+    margin: 2px 0;
+    color: #bac6d8;
+    font-size: 13px;
+}
+
+.controles {
+    padding-top: 12px;
+}
+
+button {
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #58d9c5;
+    color: #101827;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8aefdf;
+}
+
+button:focus-visible,
+select:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.controles p,
+footer {
+    color: #aebbd0;
+    font-size: 13px;
+}
+
+footer {
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .panel-juego {
+        padding: 8px;
+    }
+
+    .marcadores {
+        gap: 8px;
+    }
+
+    .marcador {
+        min-height: 78px;
+        padding: 8px 4px;
+    }
+
+    .nombre-marcador {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+
+    .puntos {
+        font-size: 28px;
+    }
+
+    .instrucciones {
+        font-size: 12px;
+    }
+}
